@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Listado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>  
+    <div *ngFor="let receta of recetas | async">
+      <ion-item>
+        <ion-label>
+          <h2>{{ receta.nombre }}</h2>
+          <h3>{{ receta.ingredientes }}</h3>
+          <p>{{ receta.preparacion }}</p>          
+        </ion-label>
+      </ion-item>
+    </div>
+</ion-content>
+
+<ion-content fullscreen>  
+  <div *ngFor="let receta of buscar | async">
+    <ion-item>
+      <ion-label>
+        <h2>{{ receta.nombre }}</h2>
+        <h3>{{ receta.ingredientes }}</h3>
+        <p>{{ receta.preparacion }}</p>          
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+  </div>
+</ion-content>
+<ion-content>
+  
+  <ion-button expand="block" (click)="busqueda()">Buscar</ion-button>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Crear</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label>Nombre</ion-label>
+    <ion-input [(ngModel)]="receta.nombre"></ion-input>
+  </ion-item>,
+
+  <ion-item>
+    <ion-label position="floating">Ingredientes</ion-label>
+    <ion-input [(ngModel)]="receta.ingredientes"></ion-input>
+  </ion-item>,
+
+  <ion-item>
+    <ion-label position="fixed">Preparacion</ion-label>
+    <ion-input [(ngModel)]="receta.preparacion"></ion-input>
+  </ion-item>
+   
+  
+</ion-content>
